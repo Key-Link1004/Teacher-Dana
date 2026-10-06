@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>Happy Teachers' Day! Ma'am Jenica </title>
+  <title>Happy Teachers' Day! Ma'am Dana </title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;700&display=swap">
   <style>
     :root {
@@ -20,22 +20,6 @@
       box-sizing: border-box;
       padding-top: env(safe-area-inset-top, 0px);
       padding-bottom: env(safe-area-inset-bottom, 0px)
-    }
-
-    .hero h1 {
-      margin: 0 0 14px
-    }
-
-    .subject-badge {
-      display: inline-flex;
-      align-items: center;
-      margin: 0 0 12px;
-      padding: 7px 16px;
-      border-radius: 999px;
-      background: #2d2a4a;
-      color: #fff6dc;
-      font-size: 16px;
-      font-weight: 700
     }
 
     @media (prefers-color-scheme:dark) {
@@ -147,6 +131,20 @@
       font-weight: 700;
       letter-spacing: .12em;
       text-transform: uppercase
+    }
+
+    .hero h1 { margin: 0 0 14px }
+
+    .subject-badge {
+      display: inline-flex;
+      align-items: center;
+      margin: 0 0 12px;
+      padding: 7px 16px;
+      border-radius: 999px;
+      background: #2d2a4a;
+      color: #fff6dc;
+      font-size: 16px;
+      font-weight: 700
     }
 
     h1 {
@@ -494,9 +492,7 @@
       text-align: center
     }
 
-    .site-footer p {
-      margin: 0
-    }
+    .site-footer p { margin: 0 }
 
     .site-footer a {
       color: var(--blu);
@@ -578,27 +574,27 @@
     </section>
 
   </main>
-    <footer class="site-footer">
-<a href="https://www.facebook.com/profile.php?id=61594992337205" aria-label="Facebook page">
-  Contact Us.
-</a>  </footer>
+  <footer class="site-footer">
+    <p>Made with love by Esme 💛</p>
+    <a href="#" aria-label="Facebook page link placeholder">Facebook page link (add later)</a>
+  </footer>
   <script>
     (function () {
       var q = new URLSearchParams(location.search);
-      var TO = (q.get("to") || "Ma'am Jenica").slice(0, 40);       // use ?to=Ma'am Santos&from=Mia
+      var TO = (q.get("to") || "Ma'am Dana").slice(0, 40);       // use ?to=Ma'am Santos&from=Mia
       var FROM = (q.get("from") || "Esme").slice(0, 40);
-      var SUBJECT = "ENG";
+      var SUBJECT = "MATH";
       var reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
       var $ = function (s) { return document.querySelector(s) };
       var done = { gifts: false, letter: false, report: false };
 
       $("#title").innerHTML = ("Happy Teachers' Day, " + TO + "!").split(" ").map(function (w) { return "<span>" + w + "</span>" }).join(" ");
-      $("#subjectBadge").textContent = "📚 " + SUBJECT;
-      $("#welcome").textContent = "Thank you for making English a place for stories, ideas, and confidence!";
+      $("#subjectBadge").textContent = "➗ " + SUBJECT;
+      $("#welcome").textContent = "Thank you for making numbers make sense and every challenge feel possible!";
       $("#dear").textContent = "Dear " + TO + ",";
       $("#certName").textContent = TO;
       $("#certFrom").textContent = "From: " + FROM;
-      $("#awardReason").textContent = "for making English inspiring and fun.";
+      $("#awardReason").textContent = "for helping every problem add up to confidence.";
 
       function confetti(n) {
         if (reduce) return; var f = $("#fx"), c = ["#ff6b6b", "#ffd93d", "#6bcb77", "#4d96ff", "#ff9aa2"], e = ["⭐", "🎈", "💛", "✨"];
@@ -627,12 +623,12 @@
 
       /* gifts */
       var gifts = [
-        ["🍎", "An apple", "Thank you for helping me grow as an English learner."],
-        ["⭐", "A gold star", "You make every story and lesson shine."],
-        ["🌻", "A flower", "Thank you for helping my ideas bloom through reading and writing."],
-        ["✏️", "A pencil", "You inspire me to write, share, and find my own words."],
-        ["💖", "A big heart", "Thank you for making English a kind and welcoming class."],
-        ["🍪", "A cookie", "A sweet thank-you for making learning English fun!"]
+        ["🍎", "An apple", "Thank you for helping my Math skills grow one step at a time."],
+        ["⭐", "A gold star", "You make solving problems feel like a win."],
+        ["🌻", "A flower", "Thank you for helping my confidence bloom with every answer."],
+        ["✏️", "A pencil", "You show me how to work through each problem patiently."],
+        ["💖", "A big heart", "Thank you for making even tricky numbers feel approachable."],
+        ["🍪", "A cookie", "A sweet thank-you for making Math fun!"]
       ];
       var seen = {};
       $("#box").addEventListener("click", function () {
@@ -655,11 +651,11 @@
       /* letter */
       var msgs = [
         "Thank you, " + TO + "!",
-        "You make English stories and lessons so enjoyable.",
-        "You help me find the right words and share my ideas.",
-        "Because of you, reading and writing feel exciting.",
-        "Thank you for cheering me on whenever I get stuck.",
-        "I feel more confident learning English with you.",
+        "You make Math feel less scary and much more fun.",
+        "Thank you for showing me that hard problems can be solved one step at a time.",
+        "You are patient when I need another explanation.",
+        "Every time I get an answer, you help me feel proud.",
+        "Your class makes me believe I can do Math.",
         "Happy Teachers' Day! — " + FROM
       ];
       var mi = 0;
@@ -671,7 +667,7 @@
       $("#nextMsg").addEventListener("click", function () { if (mi < msgs.length) addMsg() });
 
       /* report card */
-      var subs = ["Making English fun", "Bringing stories to life", "Helping me find the right words", "Building my confidence", "Inspiring a love of reading"];
+      var subs = ["Making Math easier to understand", "Helping me solve problems", "Being patient with questions", "Making numbers fun", "Building my confidence"];
       var rn = {};
       subs.forEach(function (s, i) {
         var r = document.createElement("button"); r.className = "row";
